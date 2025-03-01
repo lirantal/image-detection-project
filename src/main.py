@@ -2,7 +2,6 @@ import os
 import cv2
 import supervision as sv
 from ultralytics import YOLO
-from ultralytics import YOLO
 
 # Set up the environment
 HOME = os.path.expanduser(".")
