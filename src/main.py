@@ -6,7 +6,7 @@ from ultralytics import YOLO
 # Set up the environment
 HOME = os.path.expanduser(".")
 EXAMPLE_IMAGES_DIR = os.path.join(HOME, "image_detection_examples")
-IMAGE_PATH = f"{HOME}/image_detection_examples/dog-1.jpeg"
+IMAGE_PATH = f"{HOME}/image_detection_examples/liran-at-devopsdays-tlv.jpg"
 
 if __name__ == "__main__":
     print("Image detection environment set up.")
@@ -14,15 +14,17 @@ if __name__ == "__main__":
     
     # Add padding to the image
     padding = 100
-    image_with_padding = cv2.copyMakeBorder(
-        image,
-        top=padding,
-        bottom=padding,
-        left=padding,
-        right=padding,
-        borderType=cv2.BORDER_CONSTANT,
-        value=[255, 255, 255]
-    )
+    # image_with_padding = cv2.copyMakeBorder(
+    #     image,
+    #     top=padding,
+    #     bottom=padding,
+    #     left=padding,
+    #     right=padding,
+    #     borderType=cv2.BORDER_CONSTANT,
+    #     value=[255, 255, 255]
+    # )
+
+    image_with_padding = image
 
     model = YOLO("yolov8s.pt")
     result = model(image_with_padding, verbose=False)[0]
