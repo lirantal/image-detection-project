@@ -1,0 +1,5 @@
+supervision
+numpy
+opencv-python
+Pillow
+pytest
