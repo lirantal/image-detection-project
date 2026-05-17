@@ -28,3 +28,7 @@ To run the application, execute the following command:
 ```bash
 python src/main.py
 ```
+
+## Contributing
+
+Please consult [CONTRIBUTING](./CONTRIBUTING.md) for guidelines on contributing to this project.
